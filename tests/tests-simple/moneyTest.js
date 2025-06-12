@@ -4,7 +4,7 @@ testing framework : ext library that helps write tests easier
     create test suite/ create tests/ display results
 */
 
-import {formatCurrency} from '../scripts/utils/money';
+import {formatCurrency} from '../../scripts/utils/money';
 
 console.log('test suite: formatCurrency'); 
 
