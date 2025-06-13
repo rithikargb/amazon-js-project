@@ -8,7 +8,7 @@ describe('test suite: renderOrderSummary', () => {
     beforeEach(() => {
         spyOn(localStorage, 'setItem');
 
-        document.querySelector('.js-test-container').innerHTML =  
+        document.querySelector('.js-test-container').innerHTML =  //create ele to display orderSummary
         `  
         <div class="js-order-summary"></div>  
         <div class="js-payment-summary"></div>
