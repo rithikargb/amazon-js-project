@@ -15,9 +15,18 @@
   Note: use PascalCase for things that generate objects
   private(#) = can only be accessed within the class
 - Inheritance: class child extends parent {..} = inherits data + methods
-    super() calls parent constructor() | by default if no child class constructor
-    super.method() - calls parent method
-    discriminator property - tells us which class to convert object to (ex. type)
+  super() calls parent constructor() | by default if no child class constructor
+  super.method() - calls parent method
+  discriminator property - tells us which class to convert object to (ex. type)
+- this: inside a method = points to obj (else undefined)
+  arrow fn.s dont change the value of this, remians wtv it was
+  .call('wtv') - inside a func, we can change "this" to wtv we want (this becomes undef inside a fn)
+- Backend- manages the data of website
+    dev tools- n/w tab: shows all HTTP msgs coming in/out of our comp
+    request/response cycle = 1 req, 1 resp
+    IMP: Backend API = list of all supported URL paths = all the ways u can interact w the backend
+    status code: success/failure of resp | if starts w 4(our fault) or 5 -> error, 2 = success
+    Using the browser = making a 'GET' Request
 -->
 
 <!DOCTYPE html>
