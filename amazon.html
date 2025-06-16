@@ -22,11 +22,22 @@
   arrow fn.s dont change the value of this, remians wtv it was
   .call('wtv') - inside a func, we can change "this" to wtv we want (this becomes undef inside a fn)
 - Backend- manages the data of website
+ 1.Send req | 2.Use Callback to wait for response | 3.Then run the code
     dev tools- n/w tab: shows all HTTP msgs coming in/out of our comp
     request/response cycle = 1 req, 1 resp
     IMP: Backend API = list of all supported URL paths = all the ways u can interact w the backend
     status code: success/failure of resp | if starts w 4(our fault) or 5 -> error, 2 = success
     Using the browser = making a 'GET' Request
+    IMP: must wait (using EvListener) for http req to load first, then run the code = Callback
+- Callback = func that we want to run in the future (usually- the stuff to be displayed = HTML generation)
+    issue: multiple callbacks cause a lotta nesting
+- Promises: handle async code (~done()) - wait for code to finish b4 moving on
+    built-in class, when we create a Promise we need to give it a fn.- runs immediately
+    resolve = ~done() = controls when to go to next step
+      to share a value b/w steps => pass it in resolve('value')
+    IMP: Promise runs a Separate Thread of code, we have to add its next step
+    when theres more async code to be run sequentially, return a new promise inside .then() (multiple .then())
+    Promise.all() = run multiple promises at the same time
 -->
 
 <!DOCTYPE html>
