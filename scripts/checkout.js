@@ -26,17 +26,14 @@ async function loadPage() {
 
     return 'value2';           // = resolve('value2')
 }
-loadPage().then((value) => {
-    console.log('next step');
-    console.log(value); 
-});
+loadPage();
 
-//Promises practice
+//Promises
 
 Promise.all([
     new Promise((resolve) => {
         loadProducts(() => {
-            resolve('value to pass on');
+            resolve();
         });
     }), 
     new Promise((resolve) => {
@@ -48,17 +45,6 @@ Promise.all([
     renderOrderSummary();
     renderPaymentSummary();
 });
-
-new Promise((resolve) => {
-    console.log('runs this fn. immediately = start promise')
-    /* async code(() => {
-        console.log('finished loading');
-        resolve();
-        })
-    */ /*
-}).then(() => {   //adding a next step for promise
-    console.log('next step')
-})   
 
 */ 
 
