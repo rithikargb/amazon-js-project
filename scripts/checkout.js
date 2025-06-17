@@ -7,14 +7,19 @@ import { renderPaymentSummary } from './checkout/paymentSummary.js';
 
 //Async Await
 async function loadPage() {
-    console.log('load page');
-    await loadProductsFetch();  //instead of .then()
+    try {
+        await loadProductsFetch();  //instead of .then()
 
-    await new Promise((resolve) => {
-        loadCart(() => {
-            resolve();
+        await new Promise((resolve) => {
+            loadCart(() => {
+                resolve();
+            });
         });
-    })
+    }
+
+    catch (error) {
+       console.log('Unexpected error. Try again later.');  
+    }
 
     renderOrderSummary();
     renderPaymentSummary();
