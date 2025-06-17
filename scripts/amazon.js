@@ -1,4 +1,3 @@
-//splitting up our code into smaller fn.s increases readability
 
 import {cart, addToCart} from '../data/cart.js';
 import  {products} from '../data/products.js';
