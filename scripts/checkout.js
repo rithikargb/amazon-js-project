@@ -3,7 +3,30 @@ import { renderPaymentSummary } from './checkout/paymentSummary.js';
 // import '../data/cart-class.js';
 // import '../data/backend-practice.js';
 
-/* Promises practice
+/*
+
+//Async Await
+async function loadPage() {
+    console.log('load page');
+    await loadProductsFetch();  //instead of .then()
+
+    await new Promise((resolve) => {
+        loadCart(() => {
+            resolve();
+        });
+    })
+
+    renderOrderSummary();
+    renderPaymentSummary();
+
+    return 'value2';           // = resolve('value2')
+}
+loadPage().then((value) => {
+    console.log('next step');
+    console.log(value); 
+});
+
+//Promises practice
 
 Promise.all([
     new Promise((resolve) => {
@@ -31,6 +54,7 @@ new Promise((resolve) => {
 }).then(() => {   //adding a next step for promise
     console.log('next step')
 })   
+
 */ 
 
 renderOrderSummary();

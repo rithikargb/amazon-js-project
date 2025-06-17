@@ -38,6 +38,12 @@
     IMP: Promise runs a Separate Thread of code, we have to add its next step
     when theres more async code to be run sequentially, return a new promise inside .then() (multiple .then())
     Promise.all() = run multiple promises at the same time
+- fetch('URL') = better way to make http req | uses promise
+- async/await = promise/then | handles async code | callback < promise < AA 
+    async = makes a fn. return (/wraps code in) a promise
+    await = lets us wait for a promise to finish b4 moving on | await <async code>
+      to use await, the closest fn. must be async
+
 -->
 
 <!DOCTYPE html>

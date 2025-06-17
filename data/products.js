@@ -59,6 +59,18 @@ class Clothing extends Product {
 
 }
 
+/*
+ FETCH 
+function loadProductsFetch() {
+fetch('https://supersimple.dev/products').then((response) => {
+  return response.json() ;
+}).then((productsData) => {
+  console.log(productsData);
+});
+}
+
+*/
+
 export const products = [
   {
     id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
